@@ -24,23 +24,23 @@ export class MainContentComponent implements OnInit {
   }
 
   private loadData(): void {
-    this.musicDataService.getArtists().subscribe(data => {
+    this.musicDataService.getArtists().subscribe((data) => {
       this.artists = data;
     });
 
-    this.musicDataService.getAlbums().subscribe(data => {
+    this.musicDataService.getAlbums().subscribe((data) => {
       this.albums = data;
     });
 
-    this.musicDataService.getTrendingSongs().subscribe(data => {
+    this.musicDataService.getTrendingSongs().subscribe((data) => {
       this.trendingSongs = data;
     });
 
-    this.musicDataService.getHighlightStop().subscribe(data => {
+    this.musicDataService.getHighlightStop().subscribe((data) => {
       this.highlightStop = data;
     });
 
-    this.musicDataService.getSweetDreams().subscribe(data => {
+    this.musicDataService.getSweetDreams().subscribe((data) => {
       this.sweetDreams = data;
     });
   }

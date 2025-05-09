@@ -7,7 +7,7 @@ import { MusicDataService } from '../../shared/services/music-data.service';
   templateUrl: './music-stats.component.html',
   styleUrls: ['./music-stats.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule],
 })
 export class MusicStatsComponent implements OnInit {
   isVisible = false;
@@ -17,26 +17,26 @@ export class MusicStatsComponent implements OnInit {
   topArtists: any[] = [];
   recentDiscoveries: any[] = [];
 
-  constructor(private musicDataService: MusicDataService) { }
+  constructor(private musicDataService: MusicDataService) {}
 
   ngOnInit(): void {
     this.loadData();
   }
 
   private loadData(): void {
-    this.musicDataService.getTopGenres().subscribe(data => {
+    this.musicDataService.getTopGenres().subscribe((data) => {
       this.topGenres = data;
     });
 
-    this.musicDataService.getListeningTime().subscribe(data => {
+    this.musicDataService.getListeningTime().subscribe((data) => {
       this.listeningTime = data;
     });
 
-    this.musicDataService.getTopArtists().subscribe(data => {
+    this.musicDataService.getTopArtists().subscribe((data) => {
       this.topArtists = data;
     });
 
-    this.musicDataService.getRecentDiscoveries().subscribe(data => {
+    this.musicDataService.getRecentDiscoveries().subscribe((data) => {
       this.recentDiscoveries = data;
     });
   }

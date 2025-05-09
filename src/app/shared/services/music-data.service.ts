@@ -4,12 +4,12 @@ import { Observable } from 'rxjs';
 import { Artist, Album, Song } from '../models/music.model';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class MusicDataService {
   private apiUrl = 'http://localhost:5000/api/music';
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {}
 
   getArtists(): Observable<Artist[]> {
     return this.http.get<Artist[]>(`${this.apiUrl}/artists`);

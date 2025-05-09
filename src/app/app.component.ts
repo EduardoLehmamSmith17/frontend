@@ -14,9 +14,9 @@ import { PremiumPromotionComponent } from './components/premium-promotion/premiu
     SidebarComponent,
     FooterComponent,
     HeaderComponent,
-    PremiumPromotionComponent
+    PremiumPromotionComponent,
   ],
-  standalone: true
+  standalone: true,
 })
 export class AppComponent {
   title = 'music-streaming-app';

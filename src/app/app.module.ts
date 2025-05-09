@@ -16,15 +16,15 @@ import { MusicDataService } from './shared/services/music-data.service';
     AppComponent,
     MainContentComponent,
     SidebarComponent,
-    FooterComponent
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    MusicStatsComponent
+    MusicStatsComponent,
   ],
   providers: [MusicDataService],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

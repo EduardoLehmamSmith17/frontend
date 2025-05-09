@@ -4,7 +4,13 @@
       <h2>Seus Insights Musicais</h2>
       <button class="close-button" (click)="close()">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
         </svg>
       </button>
     </div>
@@ -45,7 +51,10 @@
         <div class="stats-section half-width">
           <h3>Artistas Mais Ouvidos</h3>
           <ul class="top-list">
-            <li *ngFor="let artist of topArtists; let i = index" class="top-item">
+            <li
+              *ngFor="let artist of topArtists; let i = index"
+              class="top-item"
+            >
               <div class="rank">{{ i + 1 }}</div>
               <div class="name">{{ artist.name }}</div>
               <div class="value">{{ artist.plays }} plays</div>
@@ -56,7 +65,10 @@
         <div class="stats-section half-width">
           <h3>Descobertas Recentes</h3>
           <ul class="discovery-list">
-            <li *ngFor="let discovery of recentDiscoveries" class="discovery-item">
+            <li
+              *ngFor="let discovery of recentDiscoveries"
+              class="discovery-item"
+            >
               <div class="discovery-name">{{ discovery.name }}</div>
               <div class="discovery-date">{{ discovery.days }} dias atrás</div>
             </li>

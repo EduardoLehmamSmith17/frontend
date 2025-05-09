@@ -5,7 +5,11 @@
       <a href="#VerTudo" class="see-all">Ver tudo</a>
     </div>
     <div class="scroll-container trending-music">
-      <div class="album-card" *ngFor="let song of trendingSongs">
+      <div
+        class="album-card"
+        *ngFor="let song of trendingSongs"
+        [title]="song.name + ' - ' + song.artist"
+      >
         <img [src]="song.image" [alt]="'Capa da música ' + song.name" />
         <h3>{{ song.name }}</h3>
         <p>{{ song.artist }}</p>
@@ -19,7 +23,11 @@
       <a href="#VerTudo" class="see-all">Ver tudo</a>
     </div>
     <div class="scroll-container popular-artists">
-      <div class="artist-card" *ngFor="let artist of artists">
+      <div
+        class="artist-card"
+        *ngFor="let artist of artists"
+        [title]="artist.name"
+      >
         <img [src]="artist.image" [alt]="'Imagem de ' + artist.name" />
         <h3>{{ artist.name }}</h3>
         <p>Artista</p>
@@ -33,7 +41,11 @@
       <a href="#VerTudo" class="see-all">Ver tudo</a>
     </div>
     <div class="scroll-container single-album">
-      <div class="album-card" *ngFor="let album of albums">
+      <div
+        class="album-card"
+        *ngFor="let album of albums"
+        [title]="album.name + ' - ' + album.artist"
+      >
         <img [src]="album.image" [alt]="'Capa do álbum ' + album.name" />
         <h3>{{ album.name }}</h3>
         <p>{{ album.artist }}</p>
@@ -47,7 +59,11 @@
       <a href="#VerTudo" class="see-all">Ver tudo</a>
     </div>
     <div class="scroll-container featured-stops">
-      <div class="album-card" *ngFor="let item of highlightStop; let i = index">
+      <div
+        class="album-card"
+        *ngFor="let item of highlightStop; let i = index"
+        [title]="item.name"
+      >
         <img [src]="item.image" alt="Imagem de exemplo" />
         <h3>{{ item.name }}</h3>
       </div>
@@ -60,7 +76,11 @@
       <a href="#VerTudo" class="see-all">Ver tudo</a>
     </div>
     <div class="scroll-container sweet-dreams">
-      <div class="album-card" *ngFor="let item of sweetDreams; let i = index">
+      <div
+        class="album-card"
+        *ngFor="let item of sweetDreams; let i = index"
+        [title]="item.name"
+      >
         <img [src]="item.image" alt="Imagem de exemplo" />
         <h3>{{ item.name }}</h3>
       </div>

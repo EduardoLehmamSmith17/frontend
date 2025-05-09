@@ -27,13 +27,23 @@
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideUp {
-  from { transform: translateY(30px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 .modal-header {
@@ -113,7 +123,7 @@
 
 .bar {
   height: 100%;
-  background: linear-gradient(90deg, #1DB954, #1ed760);
+  background: linear-gradient(90deg, #1db954, #1ed760);
   border-radius: 4px;
 }
 
@@ -146,7 +156,7 @@
 .time-value {
   font-size: 24px;
   font-weight: 700;
-  color: #1DB954;
+  color: #1db954;
   margin-bottom: 8px;
 }
 
@@ -169,7 +179,8 @@
   min-width: 0;
 }
 
-.top-list, .discovery-list {
+.top-list,
+.discovery-list {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -235,7 +246,7 @@
 }
 
 .view-full-stats {
-  background-color: #1DB954;
+  background-color: #1db954;
   color: #000;
   border: none;
   padding: 12px 24px;

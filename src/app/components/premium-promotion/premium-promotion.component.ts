@@ -6,6 +6,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './premium-promotion.component.html',
   styleUrls: ['./premium-promotion.component.scss'],
   standalone: true,
-  imports: [CommonModule]
+  imports: [CommonModule],
 })
 export class PremiumPromotionComponent {}

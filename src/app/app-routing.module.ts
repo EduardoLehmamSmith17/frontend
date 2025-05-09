@@ -4,11 +4,11 @@ import { MainContentComponent } from './components/main-content/main-content.com
 
 const routes: Routes = [
   { path: '', component: MainContentComponent },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '' },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
