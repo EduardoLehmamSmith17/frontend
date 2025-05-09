@@ -1,0 +1,244 @@
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 32px;
+  height: 64px;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navigation-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 100px;
+  height: 100px;
+  max-height: 40px;
+  object-fit: contain;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  width: 50px;
+  height: 50px;
+}
+
+.nav-button:hover {
+  transform: scale(1.04);
+  background-color: #282828;
+}
+
+.nav-button img {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #242424;
+  padding: 8px 16px;
+  border-radius: 20px;
+  width: 364px;
+  border: 1px solid transparent;
+  transition: all 0.3s;
+  margin-left: 5px;
+}
+
+.search-container:focus-within {
+  border-color: #fff;
+}
+
+.search-container input {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  width: 100%;
+  margin-left: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.search-container input::placeholder {
+  color: #a7a7a7;
+}
+
+.search-container img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.7;
+}
+
+.search-container:hover {
+  background-color: #2a2a2a;
+}
+
+.user-actions {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  color: #a7a7a7;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.separator {
+  color: #a7a7a7;
+  font-size: 20px;
+  margin: 0 4px;
+}
+
+.download-button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #a7a7a7;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.download-button:hover {
+  color: #fff;
+}
+
+.download-button img {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.signup-button {
+  background-color: transparent;
+  border: none;
+  color: #a7a7a7;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.signup-button:hover {
+  color: #fff;
+}
+
+.login-button {
+  background-color: #fff;
+  border: none;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  padding: 12px 32px;
+  border-radius: 500px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.login-button:hover {
+  transform: scale(1.04);
+  background-color: #f8f8f8;
+}
+
+@media (max-width: 1200px) {
+  .search-container {
+    width: 280px;
+  }
+}
+
+@media (max-width: 992px) {
+  .user-actions .nav-link:not(:first-child),
+  .separator,
+  .download-button {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header {
+    padding: 0 16px;
+  }
+  .navigation-section {
+    gap: 8px;
+  }
+  .logo img {
+    width: 24px;
+    height: 24px;
+  }
+  .search-container {
+    width: 200px;
+  }
+}
+
+.stats-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242424;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  color: #a7a7a7;
+  position: relative;
+}
+
+.stats-button:hover {
+  transform: scale(1.04);
+  background-color: #282828;
+  color: #1DB954;
+}
+
+.stats-tooltip {
+  position: absolute;
+  bottom: -36px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #282828;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s, visibility 0.2s;
+  z-index: 10;
+}
+
+.stats-button:hover .stats-tooltip {
+  opacity: 1;
+  visibility: visible;
+}

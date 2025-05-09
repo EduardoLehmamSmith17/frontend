@@ -1,0 +1,72 @@
+<div class="stats-overlay" *ngIf="isVisible" (click)="close()">
+  <div class="stats-modal" (click)="$event.stopPropagation()">
+    <div class="modal-header">
+      <h2>Seus Insights Musicais</h2>
+      <button class="close-button" (click)="close()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+
+    <div class="modal-content">
+      <div class="stats-section">
+        <h3>Seus Gêneros Favoritos</h3>
+        <div class="genre-bars">
+          <div *ngFor="let genre of topGenres" class="genre-bar">
+            <div class="genre-name">{{ genre.name }}</div>
+            <div class="bar-container">
+              <div class="bar" [style.width.%]="genre.percentage"></div>
+            </div>
+            <div class="percentage">{{ genre.percentage }}%</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-section">
+        <h3>Tempo de Escuta</h3>
+        <div class="time-stats">
+          <div class="time-stat">
+            <div class="time-value">{{ listeningTime.daily }}</div>
+            <div class="time-label">Diário</div>
+          </div>
+          <div class="time-stat">
+            <div class="time-value">{{ listeningTime.weekly }}</div>
+            <div class="time-label">Semanal</div>
+          </div>
+          <div class="time-stat">
+            <div class="time-value">{{ listeningTime.monthly }}</div>
+            <div class="time-label">Mensal</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stats-row">
+        <div class="stats-section half-width">
+          <h3>Artistas Mais Ouvidos</h3>
+          <ul class="top-list">
+            <li *ngFor="let artist of topArtists; let i = index" class="top-item">
+              <div class="rank">{{ i + 1 }}</div>
+              <div class="name">{{ artist.name }}</div>
+              <div class="value">{{ artist.plays }} plays</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="stats-section half-width">
+          <h3>Descobertas Recentes</h3>
+          <ul class="discovery-list">
+            <li *ngFor="let discovery of recentDiscoveries" class="discovery-item">
+              <div class="discovery-name">{{ discovery.name }}</div>
+              <div class="discovery-date">{{ discovery.days }} dias atrás</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="stats-footer">
+        <button class="view-full-stats">Ver estatísticas completas</button>
+      </div>
+    </div>
+  </div>
+</div>

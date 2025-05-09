@@ -1,0 +1,37 @@
+<header class="main-header">
+  <div class="logo">
+    <img src="assets/icons/spotifyWhite.svg" alt="Logo do Spotify" />
+  </div>
+  <div class="navigation-section">
+    <button class="nav-button home-button">
+      <img src="assets/icons/home.svg" alt="Ícone de início" />
+    </button>
+    <div class="search-container">
+      <img src="assets/icons/search.svg" alt="Ícone de pesquisa" />
+      <input placeholder="O que você quer ouvir?" />
+      <span class="separator">|</span>
+      <img src="assets/icons/browse.svg" alt="Ícone de browse" />
+    </div>
+
+    <button class="stats-button" (click)="openMusicStats()">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M18 20V10M12 20V4M6 20V14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="stats-tooltip">Insights musicais</span>
+    </button>
+  </div>
+  <div class="user-actions">
+    <a href="#Premium" class="nav-link">Premium</a>
+    <a href="#Suporte" class="nav-link">Suporte</a>
+    <a href="#Baixar" class="nav-link">Baixar</a>
+    <span class="separator">|</span>
+    <button class="download-button">
+      <img src="assets/icons/download.svg" alt="Ícone de download" />
+      <span>Instalar aplicativo</span>
+    </button>
+    <button class="signup-button">Inscrever-se</button>
+    <button class="login-button">Entrar</button>
+  </div>
+</header>
+
+<app-music-stats></app-music-stats>
